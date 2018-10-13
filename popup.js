@@ -18,9 +18,6 @@ buttonTemp.onclick = function(){
     var trackingNum = document.getElementById('trackingNum');
     var trackingSummary = document.getElementById('trackingSummary');
 
-    if (descrip[0].style.display == "block") {
-        descrip[0].style.display = "none";
-    }
 
     var url = `http://production.shippingapis.com/ShippingAPI.dll?API=TrackV2&XML=<?xml version="1.0" encoding="UTF-8" ?> <TrackRequest USERID="128CHROM2182"><TrackID ID="${input.value}"></TrackID></TrackRequest>`;
 
