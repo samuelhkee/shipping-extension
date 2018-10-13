@@ -51,8 +51,10 @@ buttonTemp.onclick = function(){
                     detail = xmlDoc.getElementsByTagName("TrackDetail")[i];
                     text += detail.textContent + "<br>";
                 }
-                
-                descrip[0].innerHTML = text;
+                console.log(xmlDoc.getElementsByTagName("TrackDetail"));
+                if (xmlDoc.getElementsByTagName("TrackDetail").length > 0) {
+                    descrip[0].innerHTML = text;
+                }
             }
         }
     }
