@@ -39,7 +39,6 @@ buttonTemp.onclick = function(){
             lengthA = xmlDoc.getElementsByTagName("TrackDetail").length;
             coll[0].textContent = 'Tracking number: ' + input.value;
             if (summary == null) { // Invalid tracking number
-                //trackingNum.textContent = input.value + " is an invalid tracking number!"
                 descrip[0].textContent = input.value + ' is an invalid tracking number!'
             }
             else {
@@ -54,9 +53,6 @@ buttonTemp.onclick = function(){
                 }
                 
                 descrip[0].innerHTML = text;
-                
-                // trackingNum.textContent = 'Tracking number: ' + input.value;
-                // trackingSummary.textContent = summary.textContent;
             }
         }
     }
