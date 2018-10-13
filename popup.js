@@ -37,6 +37,7 @@ buttonTemp.onclick = function(){
 
             // Handle response
             summary = xmlDoc.getElementsByTagName("TrackSummary")[0];
+            lengthA = xmlDoc.getElementsByTagName("TrackDetail").length;
             coll[0].textContent = 'Tracking number: ' + input.value;
             if (summary == null) { // Invalid tracking number
                 //trackingNum.textContent = input.value + " is an invalid tracking number!"
@@ -44,6 +45,17 @@ buttonTemp.onclick = function(){
             }
             else {
                 descrip[0].textContent = summary.textContent;
+
+                var i;
+                var text = "";
+
+                for (i = 0; i < lengthA; i++){
+                    detail = xmlDoc.getElementsByTagName("TrackDetail")[i];
+                    text += detail.textContent + "<br>";
+                }
+                
+                descrip[0].innerHTML = text;
+                
                 // trackingNum.textContent = 'Tracking number: ' + input.value;
                 // trackingSummary.textContent = summary.textContent;
             }
