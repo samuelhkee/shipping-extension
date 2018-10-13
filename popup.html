@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Package Tracker</title>
         <link href="style.css" type="text/css" rel="stylesheet">
-        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     </head>
     <body>
         <h1 id="greeting">Package Tracker!</h1>
-        <h2>This chrome extension will track your package</h2>
-        <h2 id="numDisplay">--Enter Tracking number:--</h2>
+        <h2 id="numDisplay">Enter tracking number:</h2>
 
-        <input type="text" id="trackingNumInput">
-        
-       
-        <button id="button1">Submit</button>
-        <script src="popup.js"></script>
+        <input type="text" id="trackingNumInput"> <button id="button1">Go</button>
 
         <h3 id="trackingNum"></h3>
         <p id="trackingSummary"></p>
     </body>
+
+    <script src="popup.js"></script>
 </html>
