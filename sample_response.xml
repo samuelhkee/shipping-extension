@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TrackResponse>
+    <TrackInfo ID="9405510200829852626161">
+        <TrackSummary>Your item arrived at the LA JOLLA, CA 92092 post office at 5:57 am on October 5, 2018 and is ready for pickup.</TrackSummary>
+        <TrackDetail>Delivered to Agent for Final Delivery, 10/05/2018, 5:55 am, LA JOLLA, CA 92092</TrackDetail>
+        <TrackDetail>Departed USPS Regional Destination Facility, 10/05/2018, 4:25 am, SAN DIEGO CA DISTRIBUTION CENTER</TrackDetail>
+        <TrackDetail>Arrived at Post Office, October 5, 2018, 4:21 am, SAN DIEGO, CA 92199</TrackDetail>
+        <TrackDetail>Arrived at USPS Regional Destination Facility, 10/05/2018, 12:06 am, SAN DIEGO CA DISTRIBUTION CENTER</TrackDetail>
+        <TrackDetail>In Transit to Next Facility, 10/04/2018</TrackDetail>
+        <TrackDetail>In Transit to Next Facility, 10/03/2018</TrackDetail>
+        <TrackDetail>In Transit to Next Facility, 10/02/2018</TrackDetail>
+        <TrackDetail>Arrived at USPS Regional Origin Facility, 10/01/2018, 10:22 pm, ELK GROVE VILLAGE IL DISTRIBUTION CENTER</TrackDetail>
+        <TrackDetail>Accepted at USPS Origin Facility, October 1, 2018, 9:07 pm, MONTGOMERY, IL 60538</TrackDetail>
+        <TrackDetail>Shipping Label Created, USPS Awaiting Item, October 1, 2018, 6:39 am, MONTGOMERY, IL 60538</TrackDetail>
+    </TrackInfo>
+</TrackResponse>

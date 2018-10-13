@@ -1,20 +1,35 @@
 var buttonTemp = document.getElementById('button1');
 
 buttonTemp.onclick = function(){
-    var input = document.getElementById('trackingNum');
-    var output = document.getElementById('track');
-    output.textContent = 'Tracking number 1: ' + input.value;
+    var input = document.getElementById('trackingNumInput');
+    var trackingNum = document.getElementById('trackingNum');
+    var trackingSummary = document.getElementById('trackingSummary')
     
-    var url = `http://production.shippingapis.com/ShippingAPI.dll?API=TrackV2&XML=<?xml version="1.0" encoding="UTF-8" ?>
-    <TrackRequest USERID="128CHROM2182"><TrackID ID="${input.value}"></TrackID></TrackRequest>`;
+    var url = `http://production.shippingapis.com/ShippingAPI.dll?API=TrackV2&XML=<?xml version="1.0" encoding="UTF-8" ?> <TrackRequest USERID="128CHROM2182"><TrackID ID="${input.value}"></TrackID></TrackRequest>`;
 
-    var myTest = new XMLHttpRequest();
-    myTest.open('GET', 'ShippingAPI.xml');
+    console.log(url);
 
-    myTest.responseType = 'text';
-    console.log(myTest.responseText);
-    if (myTest.status === 200) {
-        console.log(myTest.responseText);
+    var req = new XMLHttpRequest();
+    req.open('GET', url);
+    req.send();
+
+    req.onreadystatechange=(e)=>{
+        xmlDoc = req.responseXML;
+        if (xmlDoc != null) {
+            // Clear all elements
+            trackingNum.textContent = "";
+            trackingSummary.textContent = "";
+
+            // Handle response
+            summary = xmlDoc.getElementsByTagName("TrackSummary")[0];
+            if (summary == null) { // Invalid tracking number
+                trackingNum.textContent = input.value + " is an invalid tracking number!"
+            }
+            else {
+                trackingNum.textContent = 'Tracking number: ' + input.value;
+                trackingSummary.textContent = summary.textContent;
+            }
+        }
     }
-   
+
 }
