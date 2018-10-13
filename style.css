@@ -1,3 +1,33 @@
-body{
-    background: #efe;
+body {
+    width: 400px;
+    height: 500px;
+    background: rgb(40,40,40);
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+button {
+    background-color: white;
+    border: none;
+    color: rgb(40, 40, 40);
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input {
+    width: 200px;
+    height: 22px;
 }
